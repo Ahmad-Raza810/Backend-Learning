@@ -1,0 +1,10 @@
+.idea
+.mvn
+
+src/test
+src/main/resources
+target
+.gitattributes
+HELP.md
+mvnw
+mvnw.cmd
