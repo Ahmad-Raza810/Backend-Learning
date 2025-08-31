@@ -1,0 +1,73 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height:100vh;
+    width: 100vw;
+    background-color:rgb(245, 241, 241);
+
+
+}
+
+.header{
+    height: 30%;
+    display: flex;
+    background-color: grey;
+    gap: 10px;
+}
+
+.options{
+    width: 80%;
+    list-style: none;
+    display: flex;
+    gap:15px;
+    justify-content: space-around;
+    align-items: center;
+
+    
+}
+
+.options a{
+    text-decoration: none;
+    color: rgb(226, 241, 255);
+}
+
+.options h1{
+    font-size:30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.options li{
+    font-size:30px;
+}
+
+.searchBox{
+    font-size:25px;
+    padding-top: 90px;
+    display: flex;
+
+}
+
+.searchBox input{
+    height: 40px;
+    width: 300px;
+    border-radius: 20px;
+   
+}
+
+.search-button{
+    height:60px;
+    width: 70px;
+    border-radius: 50%;
+    margin-top:-7px;
+}
+.search-button img{
+    height:100%;
+    width: 100%;
+}
+
+
+
