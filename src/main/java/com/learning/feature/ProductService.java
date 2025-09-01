@@ -18,4 +18,9 @@ public class ProductService {
         return productRepository.findByNameContainingIgnoreCase(name);
 
     }
+
+    public Product addProduct(ProductDTO productDTO){
+        Product product=ProductDTO.dtoToProduct(productDTO);
+       return productRepository.save(product);
+    }
 }

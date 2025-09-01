@@ -1,12 +1,10 @@
 package com.learning.feature;
 
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.ResponseCache;
 import java.util.List;
@@ -23,8 +21,14 @@ public class ProductController {
     }
 
     @GetMapping("products")
-    public ResponseEntity<List<Product>> getProductByName(String name){
+    public ResponseEntity<List<Product>> getProductByName(@RequestParam("query") String name){
         List<Product> products=productService.getProductByName(name);
         return new ResponseEntity<>(products, HttpStatus.OK);
+    }
+
+    @PostMapping("product")
+    public ResponseEntity<Product>  addProduct(@Valid @RequestBody ProductDTO productDTO){
+        Product product=productService.addProduct(productDTO);
+        return new ResponseEntity<>(product, HttpStatus.OK);
     }
 }
